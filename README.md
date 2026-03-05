@@ -44,22 +44,13 @@ project/
 ├── bot_errors.log
 └── README.md
 
-```
 
----
 
-## ⚙️ Installation
 
-### 1️⃣ Clone the repository
 
-```
+⚙️ Installation
 
-git clone [https://github.com/YOUR-USERNAME/YOUR-REPO.git](https://github.com/YOUR-USERNAME/YOUR-REPO.git)
-cd YOUR-REPO
-
-```
-
-### 2️⃣ Install dependencies
+2️⃣ Install dependencies
 
 ```
 
