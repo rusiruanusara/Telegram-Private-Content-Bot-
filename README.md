@@ -32,9 +32,6 @@ Users must enter a **daily key** to unlock access and retrieve messages from a p
 ---
 
 ## 📁 Project Structure
-
-```
-
 project/
 │
 ├── bot.py
@@ -44,8 +41,7 @@ project/
 ├── bot_errors.log
 └── README.md
 
-
-
+```
 
 
 ⚙️ Installation
