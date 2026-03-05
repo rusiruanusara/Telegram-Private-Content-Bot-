@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Daily Access Key</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#0f172a;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    background:#1e293b;
+    padding:40px;
+    border-radius:12px;
+    text-align:center;
+    width:350px;
+}
+
+.key{
+    font-size:28px;
+    font-weight:bold;
+    margin-top:20px;
+    color:#38bdf8;
+}
+
+.date{
+    opacity:0.7;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>🔑 Today's Access Key</h2>
+
+<div class="date" id="date"></div>
+
+<div class="key" id="key"></div>
+
+<p style="margin-top:20px;opacity:0.7;">
+Send this key to the Telegram bot to unlock access.
+</p>
+
+</div>
+
+<script>
+
+function generateKey(){
+
+    const now = new Date();
+
+    const year = now.getFullYear();
+    const month = String(now.getMonth()+1).padStart(2,'0');
+    const day = String(now.getDate()).padStart(2,'0');
+
+    const seedStr = `${year}${month}${day}`;
+    const seed = parseInt(seedStr);
+
+    const scrambled = seed * 12345 + 67890;
+
+    const hex = scrambled.toString(16).toUpperCase();
+
+    const key = hex.substring(0,12);
+
+    document.getElementById("key").innerText = key;
+    document.getElementById("date").innerText = `${year}-${month}-${day}`;
+
+}
+
+generateKey();
+
+</script>
+
+</body>
+</html>
